@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.jetbrains'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation "org.jsoup:jsoup:1.15.3"
+    implementation group: 'com.ibm.icu', name: 'icu4j', version: '51.1'
+    implementation 'org.json:json:20171018'
+}
+
+test {
+    useJUnitPlatform()
+}
